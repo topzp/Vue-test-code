@@ -9,6 +9,10 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: "/",
+      redirect: "/exercise2"
+    },
+    {
       path: "/HelloWorld",
       name: "HelloWorld",
       component: HelloWorld
@@ -22,6 +26,11 @@ export default new Router({
       path: "/exercise1",
       name: "index",
       component: Exercise1
+    },
+    {
+      path: "/exercise2",
+      name: "index",
+      component: () => import("@/components/exercise2/index.vue")
     }
   ]
 });
