@@ -39,7 +39,7 @@ body {
 .checkerboard {
   width: 100%;
   height: 900px;
-  background-color: rgb(211, 208, 208);
+  background-color: rgb(255, 255, 255);
 }
 .wrapper {
   display: flex;
