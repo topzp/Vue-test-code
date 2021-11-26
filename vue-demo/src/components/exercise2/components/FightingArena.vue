@@ -62,7 +62,7 @@ export default {
   },
   data () {
     return {
-      img1: ''
+      img1: {}
     }
   },
   // methods: {

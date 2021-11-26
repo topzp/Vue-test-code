@@ -2,42 +2,90 @@
   <div class="Ryu">
     <span style="font-size: 20px; color: #000;">隆</span>
     <div class="table">
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-      <Cell :ryu="ryu" />
-
+      <div v-for="(item,index) in ryu"
+           :key="index">
+        <Cell :ryu="item" />
+      </div>
     </div>
-    <!-- <div class="ryu">
-      <span><img :src="img"
-             class="image" /></span>
-    </div> -->
   </div>
 </template>
 
 <script>
 import Cell from '@/components/exercise2/components/Cell.vue'
-
+// import Bus from '@/components/exercise2/components/bus.js'
 export default {
   components: {
     Cell
   },
   data () {
     return {
-      ryu: {
-        id: 1,
-        img: require('@/assets/ryu.jpg')
-      }
+      ryu: [
 
+        {
+          id: 1,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 2,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 3,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 4,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 5,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 6,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 7,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 8,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 9,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 10,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 11,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+        {
+          id: 12,
+          username: 'ryu',
+          img: require('@/assets/ryu.jpg')
+        },
+      ]
     }
+  },
+  methods: {
+
   }
 
 }

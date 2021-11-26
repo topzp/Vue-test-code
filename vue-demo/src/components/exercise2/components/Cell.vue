@@ -1,17 +1,17 @@
 <template>
   <div class="cell">
-    <div v-if="ryu.id===1">
-      <span><img :src="ryu.img"
+    <div v-if="ryu.username==='ryu'">
+      <span v-if="onshow"><img :src="ryu.img"
              class="image"
-             @click="selected(1)" /></span>
+             @click="selected(ryu.id)" /></span>
     </div>
 
-    <div v-if="ken.id===2">
-      <span><img :src="ken.img"
+    <div v-if="ken.username==='ken'">
+      <span v-if="onshow"><img :src="ken.img"
              class="image"
-             @click="selected(2)" /></span>
+             @click="selected(ken.id)" /></span>
     </div>
-    <div v-if="img.id===2||img.id===1">
+    <div v-if="img.username==='ryu'||img.username==='ken'">
       <span><img :src="img.img"
              class="image" /></span>
     </div>
@@ -41,12 +41,20 @@ export default {
       default () {
         return {}
       }
+    },
+    active: {
+      type: Function
     }
+
+
+
   },
 
   data () {
     return {
-
+      b: [],
+      onshow: true,
+      chess: false
     }
   },
 
@@ -54,8 +62,10 @@ export default {
     selected (id) {
       if (this.ryu.id === id) {
         Bus.$emit('childByValue', this.ryu)
+        setTimeout(this.onshow = !this.onshow, 1000);
       } else if (this.ken.id === id) {
         Bus.$emit('childByValue', this.ken)
+        setTimeout(this.onshow = !this.onshow, 1000);
       }
     }
   }

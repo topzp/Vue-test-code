@@ -2,18 +2,10 @@
   <div class="Ken">
     <span style="font-size: 20px; color: #000;">肯</span>
     <div class="table">
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
-      <Cell :ken="ken" />
+      <div v-for="(item,index) in ken"
+           :key="index">
+        <Cell :ken="item" />
+      </div>
 
     </div>
 
@@ -30,10 +22,68 @@ export default {
   data () {
     return {
 
-      ken: {
-        id: 2,
-        img: require('@/assets/ken.jpg')
-      },
+      ken: [
+        {
+          id: 21,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 22,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 23,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 24,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 25,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 26,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 27,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 28,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 29,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 30,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 31,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+        {
+          id: 32,
+          username: 'ken',
+          img: require('@/assets/ken.jpg')
+        },
+      ]
 
 
     }
