@@ -2,6 +2,7 @@
   <div class="fightingArena">
 
     <Cell :img="img1"
+          :active="active"
           @click="active(0,0)" />
     <Cell :img="img1"
           @click="active(0,1)" />
@@ -62,7 +63,9 @@ export default {
   },
   data () {
     return {
-      img1: {}
+      img1: {},
+      chess: ''
+
     }
   },
   // methods: {
@@ -76,6 +79,12 @@ export default {
       console.log('ccc', data)
       vm.img1 = data
     })
+  },
+  methods: {
+    active (x, y) {
+      this.chess = true
+    }
+
   }
 }
 </script>
